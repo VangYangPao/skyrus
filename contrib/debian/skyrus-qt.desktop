@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Skyrus
+Comment=Skyrus P2P Cryptocurrency
+Comment[fr]=Skyrus, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Skyrus, eşten eşe kriptografik sanal para birimi
+Exec=skyrus-qt %u
+Terminal=false
+Type=Application
+Icon=skyrus128
+MimeType=x-scheme-handler/skyrus;
+Categories=Office;Finance;

@@ -1,0 +1,33 @@
+# /etc/conf.d/skyrusd: config file for /etc/init.d/skyrusd
+
+# Config file location
+#SKYRUSD_CONFIGFILE="/etc/skyrus/skyrus.conf"
+
+# What directory to write pidfile to?  (created and owned by $SKYRUSD_USER)
+#SKYRUSD_PIDDIR="/var/run/skyrusd"
+
+# What filename to give the pidfile
+#SKYRUSD_PIDFILE="${SKYRUSD_PIDDIR}/skyrusd.pid"
+
+# Where to write skyrusd data (be mindful that the blockchain is large)
+#SKYRUSD_DATADIR="/var/lib/skyrusd"
+
+# User and group to own skyrusd process
+#SKYRUSD_USER="skyrus"
+#SKYRUSD_GROUP="skyrus"
+
+# Path to skyrusd executable
+#SKYRUSD_BIN="/usr/bin/skyrusd"
+
+# Nice value to run skyrusd under
+#SKYRUSD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+SKYRUSD_OPTS="-disablewallet"
+
+# The timeout in seconds OpenRC will wait for skyrusd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+SKYRUSD_SIGTERM_TIMEOUT=60

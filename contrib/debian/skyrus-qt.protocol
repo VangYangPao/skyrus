@@ -1,0 +1,11 @@
+[Protocol]
+exec=skyrus-qt '%u'
+protocol=skyrus
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

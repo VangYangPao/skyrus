@@ -1,0 +1,6 @@
+usr/local/bin/skyrus-qt usr/bin
+share/pixmaps/skyrus32.xpm usr/share/pixmaps
+share/pixmaps/skyrus16.xpm usr/share/pixmaps
+share/pixmaps/skyrus128.png usr/share/pixmaps
+debian/skyrus-qt.desktop usr/share/applications
+debian/skyrus-qt.protocol usr/share/kde4/services/

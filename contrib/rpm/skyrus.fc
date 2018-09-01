@@ -1,0 +1,8 @@
+/usr/bin/skyrus-cli		--	gen_context(system_u:object_r:skyrus_exec_t,s0)
+/usr/sbin/skyrusd		--	gen_context(system_u:object_r:skyrus_exec_t,s0)
+/usr/lib(64)?/skyrus/skyrusd		--	gen_context(system_u:object_r:skyrus_exec_t,s0)
+
+/etc/skyrus(/.*)?		gen_context(system_u:object_r:skyrus_conf_t,s0)
+/var/lib/skyrus(/.*)?		gen_context(system_u:object_r:skyrus_var_lib_t,s0)
+
+(/var)?/run/skyrusd(/.*)?   gen_context(system_u:object_r:skyrus_var_run_t,s0)
