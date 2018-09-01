@@ -1,6 +1,5 @@
-![Skyrus](./img/logo-extended.png)
 
-This is the working repository for SKX Coin 4.2.0, our fork of bitcoin-core 0.13.
+This is the working repository for SKX Coin 1.0.0.1, our fork of bitcoin-core 0.13.
 
 For more information please visit the website:
 
@@ -22,8 +21,8 @@ https://skyrus.org/project-roadmap/
 
 | Specification | Value |
 |:-----------|:-----------|
-| addanonserver | `149.28.120.195:41377` |
-| addanonserver | `95.183.53.184:41377` |
+| addanonserver | `148.28.120.195:41377` |
+| addanonserver | `94.183.53.184:41377` |
 
 ## Social Channels
 
