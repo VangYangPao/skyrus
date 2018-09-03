@@ -102,7 +102,7 @@ public:
         consensus.nDailyBlockCount =  (24 * 60 * 60) / consensus.nTargetSpacing;
         consensus.nModifierInterval = 10 * 60; // time to elapse before new modifier is computed
         consensus.nTargetTimespan = 25 * 30;
-        consensus.nLastPOWBlock = 20000;
+        consensus.nLastPOWBlock = 101;
         consensus.nVotingPeriod = 2880 * 7; // 7 Days
         consensus.nMinimumQuorum = 0.5;
         consensus.nQuorumVotes = consensus.nVotingPeriod * consensus.nMinimumQuorum;
@@ -161,38 +161,6 @@ public:
         bnProofOfWorkLimit = arith_uint256(~arith_uint256() >> 16);
 
         genesis = CreateGenesisBlock(1535716800, 28607, 0x1f00ffff, 1, 0);
-
-        if (false)
-        {
-            printf("Searching for genesis block...\n");
-            // This will figure out a valid hash and Nonce if you're
-            // creating a different genesis block:
-            arith_uint256 hashTarget = arith_uint256().SetCompact(genesis.nBits);
-            uint256 thash;
- 
-            while(1)
-            {
-                // Generic scrypt
-                thash = genesis.GetHash();
-
-                if (UintToArith256(thash) <= hashTarget)
-                    break;
-                if ((genesis.nNonce & 0xFFF) == 0)
-                {
-                    printf("nonce %08X: hash = %s (target = %s)\n", genesis.nNonce, thash.ToString().c_str(), hashTarget.ToString().c_str());
-                }
-                ++genesis.nNonce;
-                if (genesis.nNonce == 0)
-                {
-                    printf("NONCE WRAPPED, incrementing time\n");
-                    ++genesis.nTime;
-                }
-            }
-            printf("genesis.nTime = %u \n", genesis.nTime);
-            printf("genesis.nNonce = %u \n", genesis.nNonce);
-            printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-            printf("genesis.GetMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());            
-        } 
 
 	    consensus.hashGenesisBlock = genesis.GetHash();
 
